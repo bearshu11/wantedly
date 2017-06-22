@@ -5,17 +5,21 @@
 <br>
 <h2>Skills</h2>
 <ul>
-<%= form_for(@user) do |f| %>
-    <% @skills.each do |skill, count| %>
-        <li> 
-            <%= skill %> <%= count %>
-            <%= f.submit "+1", class: "btn btn-success" %>
-        </li>
+    <%= form_for(@user) do |f| %>
+        <% @skills.each do |skill, count| %>
+            <li> 
+                <%= skill %> <%= count %>
+                <% if @user.id != session[:user_id] %>
+                    <%= f.submit "+1", class: "btn btn-success" %>
+                <% end %>
+            </li>
+        <% end %>
     <% end %>
-    </ul>
-<% end %>
+</ul>
+
 <%= form_for(@new_skill) do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
     <%= f.submit "create new skill", class: "btm btn-primary" %>
 <% end %>
+
