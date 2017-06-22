@@ -5,8 +5,8 @@
 <br>
 <h2>Skills</h2>
 <ul>
-    <% @skills.each do |skill, count| %>
-        <%= form_for(@new_skill) do |f| %>
+    <%= form_for(@new_skill) do |f| %>
+        <% @skills.each do |skill, count| %>
             <li>
                 <%= skill %> <%= count %>
                 <% if @user.id != session[:user_id] %>
@@ -15,7 +15,6 @@
                     <%= f.submit "+1", class: "btn btn-success" %>
                 <% end %>
             </li>
-        <% end %>
     <% end %>
     <% form_for(@new_skill) do |f| %>
         <%= f.label :name %>

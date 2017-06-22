@@ -5,6 +5,7 @@ class SkillsController < ApplicationController
                            from_user_id: session[:user_id],
                            )
         @user = User.find(@skill.user_id)
+
         if @skill.save
             redirect_to user_url(@user)
         else

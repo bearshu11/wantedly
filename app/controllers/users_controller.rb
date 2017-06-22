@@ -2,7 +2,8 @@ class UsersController < ApplicationController
     def show
         @user = User.find(params[:id])
         skills = Skill.where(user_id: params[:id]).group(:name).count
-        @skills = skills.sort_by{|skill,count| count}
+        #skills = Skill.where(user_id: params[:id])
+        @skills = skills.sort_by{|skill,count| -count}
         @new_skill = Skill.new
     end
     def new
