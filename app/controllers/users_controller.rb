@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
     def show
         @user = User.find(params[:id])
+        @skills = Skill.where(user_id: params[:id]).group(:name).count
     end
     def new
         @user = User.new
