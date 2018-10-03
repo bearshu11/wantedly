@@ -12,7 +12,7 @@ about: 新しい機能を追加する際のIssue Template
 ### 背景
 <!-- なぜこのIssueが必要なのか？ -->
 
-### 関連するProject,Issue
+### 関連するProject, Issue
 <!-- 関連するProject,Issueのリンクを貼る． -->
 
 ### 目的
