@@ -9,7 +9,7 @@ about: データ分析をするときのIssue Template
 <!--
 # ここに記入すること以外でするべきこと
 - 関連するProjectを設定する
-- Assignesを設定する
+- Assigneesを設定する
 -->
 
 ## 概要
